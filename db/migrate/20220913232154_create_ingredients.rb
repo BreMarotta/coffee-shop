@@ -7,8 +7,3 @@ class CreateIngredients < ActiveRecord::Migration[7.0]
       t.boolean :active
       t.integer :itemable_id
       t.string :itemable_type
-
-      t.timestamps
-    end
-  end
-end
