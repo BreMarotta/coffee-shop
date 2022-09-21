@@ -1,7 +1,6 @@
 .App {
   text-align: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  /* background-image: url("https://media.istockphoto.com/vectors/coffee-seamless-pattern-vector-graphic-background-vector-id1189322746"); */
+  font-family: "Gill Sans", sans-serif;
 }
 
 body {
@@ -40,4 +39,22 @@ h1 {
   max-width: 50%;
   margin: auto;
   border-radius: 15px;
+ }
+
+ .footer {
+  background-color: darksalmon;
+  color: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-left: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+ }
+
+ .footer a {
+  color: black;
+  padding: 10px;
+  
+
  }

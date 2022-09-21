@@ -7,6 +7,8 @@ import Announcements from './features/Announcements';
 import Drinks from './features/Drinks';
 import Foods from './features/Foods';
 import Gallery from './features/Gallery';
+import Footer from './features/Footer';
+import Login from './features/Login';
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -38,7 +40,11 @@ const App = () => {
           <Route exact path="/gallery">
             <Gallery />
           </Route>
+          <Route exact path="/login">
+            <Login />
+          </Route>
         </Switch>
+        <Footer />
       </div>
     </BrowserRouter>
   );
