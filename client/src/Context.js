@@ -8,10 +8,15 @@ const UserProvider = ({children}) => {
     useEffect(() => {
 
     }, [])
+    
+    const handleLogin = () => {
+        setLoggedIn(true)
+    }
 
     return (
         <Context.Provider value ={{
-
+            loggedIn, 
+            handleLogin
         }}>
             {children}
         </Context.Provider>
