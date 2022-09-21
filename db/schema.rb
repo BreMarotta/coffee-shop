@@ -14,6 +14,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_13_232248) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "admins", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "announcements", force: :cascade do |t|
     t.string "title"
     t.string "msg"
@@ -58,13 +65,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_13_232248) do
     t.boolean "active"
     t.integer "itemable_id"
     t.string "itemable_type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
