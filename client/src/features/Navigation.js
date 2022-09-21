@@ -5,7 +5,7 @@ const Navigation = () => {
 
   return (
     <div className="navigation" >
-        <h1 style={{color: "linen"}}>Coffee Shop</h1>
+        <h1 style={{color: "bisque"}}>Coffee Shop</h1>
         <NavLink to='/' className="navLink">Home</NavLink>
         <NavLink to='/testing' className="navLink">Testing Route</NavLink>
         <NavLink to='/announcements' className="navLink">Announcements</NavLink>

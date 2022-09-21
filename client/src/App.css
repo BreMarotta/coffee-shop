@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: url("./images/Untitled design.png");
+  background-image: url("./images/Untitled design (3).png");
   background-size: cover;
   background-color: magenta;
   align-content: center;
@@ -12,16 +12,20 @@ body {
 }
 
 .navigation {
-  background-color: darkslategray;
+  background-color: darksalmon;
 }
 
 .navLink {
   margin: 5px;
   color: black;
-  background-color: linen;
+  background-color: bisque;
   border-radius: 5px;
   padding-left: 5px;
   padding-right: 5px;
   padding-bottom: 3px;
   opacity: 1;
+}
+h1 {
+  font-size: 38px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
