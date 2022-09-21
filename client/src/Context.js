@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const Context = React.createContext()
 
 const UserProvider = ({children}) => {
-    const [loggedIn, setLoggedIn] = useState(false)
+    const [loggedIn, setLoggedIn] = useState(false);
+    const history = useHistory();
 
     useEffect(() => {
         fetch('/me')
@@ -27,7 +29,8 @@ const UserProvider = ({children}) => {
             headers: {"Content-Type": "application/json"}
         })
         .then(res => {
-            setLoggedIn(false)
+            setLoggedIn(false);
+            history.push('./');
         })
         
 

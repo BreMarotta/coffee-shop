@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Context } from '../Context'
+import { Context } from '../../Context'
 
 const Announcements = () => {
   const { loggedIn } = useContext(Context)

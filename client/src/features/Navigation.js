@@ -4,7 +4,7 @@ import { Context } from '../Context';
 
 
 const Navigation = () => {
-  const { loggedIn, handleLogout } = useContext(Context) 
+  const { loggedIn, handleLogout } = useContext(Context); 
 
   const toggleAdmin = loggedIn ? <button className="adminButton" onClick={handleLogout}>Logout</button> : <NavLink to='/login' className="adminLink">Admin Login</NavLink>
   return (

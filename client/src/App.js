@@ -3,10 +3,10 @@ import './App.css';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navigation from './features/Navigation';
 import Home from './features/Home';
-import Announcements from './features/Announcements';
-import Drinks from './features/Drinks';
-import Foods from './features/Foods';
-import Gallery from './features/Gallery';
+import Announcements from './features/Announcements/Announcements';
+import Drinks from './features/Drinks/Drinks';
+import Foods from './features/Food/Foods';
+import Gallery from './features/Gallery/Gallery';
 import Footer from './features/Footer';
 import Login from './features/Login';
 
