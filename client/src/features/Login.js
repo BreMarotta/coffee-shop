@@ -1,8 +1,11 @@
-import React, { useState, useContext } from 'react'
-import { Context } from '../Context'
+import React, { useState, useContext } from 'react';
+import { useHistory } from 'react-router-dom';
+import { Context } from '../Context';
+
 
 const Login = () => {
     const { handleLogin } = useContext(Context);
+    const history = useHistory()
     const [error, setError] = useState("")
 
     const [adminObj, setAdminObj] = useState({
@@ -12,11 +15,12 @@ const Login = () => {
 
     const handleChange = (e) => {
         const newObj = {...adminObj, [e.target.name]: e.target.value};
-        setAdminObj(newObj)
+        setAdminObj(newObj);
+        setError("");
     }
 
     const handleSubmit = (e) => {
-        e.preventDefualt();
+        e.preventDefault();
         fetch('/login', {
             method: "POST",
             headers: {"Content-Type": "application/json"},
@@ -25,25 +29,26 @@ const Login = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                if(!data.error && !data.errors){
-                    handleLogin()
-                } else {
-                    setAdminObj({
-                        username: "",
-                        password: ""
-                    })
-                    setError(data.error)
-                }
+            if(!data.error && !data.errors){
+                handleLogin();
+                history.push('/');
+            } else {
+                setAdminObj({
+                    username: "",
+                    password: ""
+                })
+                setError(data.error)
+            }
         })
-
     }
 
   return (
     <form onSubmit={handleSubmit}>
         <h1>Admin Login</h1>
-        <small>As the shop owner, you can log in to update/ change information for your site.</small>
-        <hr/><br/>
-
+        <small>Log in to update/ change information for your site.</small>
+        <hr/>
+        {error}
+        <br/>
         <label>Username: </label>
             <input
                 type="text"
@@ -54,7 +59,7 @@ const Login = () => {
             <br/><br/>
         <label>Password: </label>
             <input
-                type="text"
+                type="password"
                 id="password"
                 name="password"
                 value = {adminObj.password}

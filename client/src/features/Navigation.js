@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom';
+import { Context } from '../Context';
 
 
 const Navigation = () => {
+  const { loggedIn, handleLogout } = useContext(Context) 
 
+  console.log(loggedIn)
+
+  const toggleAdmin = loggedIn ? <button className="adminButton" onClick={handleLogout}>Logout</button> : <NavLink to='/login' className="adminLink">Admin Login</NavLink>
   return (
     <div className="navigation" >
-      <NavLink to='/login' className="adminLink">Admin Login</NavLink>
+      {toggleAdmin}
       <br/>
       <h1 style={{color: "bisque"}}>Coffee Shop</h1>
         <NavLink to='/' className="navLink">Home</NavLink>

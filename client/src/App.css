@@ -31,6 +31,13 @@ body {
   font-size: 10px;
   padding-top: 10px;
 }
+.adminButton {
+  float: right;
+  color: black;
+  font-size: 10px;
+  background-color: darksalmon;
+}
+
 h1 {
   font-size: 38px;
   margin-top: 10px;
