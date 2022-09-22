@@ -4,14 +4,15 @@ import { Context } from '../../Context';
 const Foods = () => {
   const { loggedIn } = useContext(Context)
 
-  if(!loggedIn){
-     return (
-    <div>Foods</div>
+  const displayForm = loggedIn ? <div>Form will go here</div> : <></>
+
+  return (
+    <div>
+      Foods
+      {displayForm}
+    </div>
   )
-  }
-  return(
-    <div>LoggedIn so there will be info and food forms</div>
- )
+
 }
 
 export default Foods

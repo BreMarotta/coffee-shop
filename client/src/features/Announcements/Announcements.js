@@ -4,14 +4,15 @@ import { Context } from '../../Context'
 const Announcements = () => {
   const { loggedIn } = useContext(Context)
 
-  if(!loggedIn){
-     return (
-    <div>Announcements</div>
+  const displayForm = loggedIn ? <div>Form</div> : <></>
+
+    return (
+    <div>
+      Announcements
+      {displayForm}
+    </div>
   )
-  }
-  return(
-    <div>LoggedIn so there will be info and announcement forms</div>
- )
+
 }
 
 export default Announcements

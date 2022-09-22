@@ -6,7 +6,7 @@ import Home from './features/Home';
 import Announcements from './features/Announcements/Announcements';
 import Drinks from './features/Drinks/Drinks';
 import Foods from './features/Food/Foods';
-import Gallery from './features/Gallery/Gallery';
+import Gallery from './features/Images/Gallery';
 import Footer from './features/Footer';
 import Login from './features/Login';
 

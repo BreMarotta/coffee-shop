@@ -4,14 +4,14 @@ import { Context } from '../../Context'
 const Gallery = () => {
   const { loggedIn } = useContext(Context)
 
-  if(!loggedIn){
-     return (
-    <div>Gallery</div>
+  const displayForm = loggedIn ? <div>Form goes here</div> : <></>
+  
+  return (
+    <div>
+      Gallery
+      {displayForm}
+    </div>
   )
-  }
-  return(
-    <div>LoggedIn so there will be info and gallery forms</div>
- )
 }
 
 export default Gallery

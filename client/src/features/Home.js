@@ -5,14 +5,15 @@ import { Context } from '../Context'
 const Home = () => {
   const { loggedIn } = useContext(Context)
 
-  if(!loggedIn){
-     return (
-    <div>Home</div>
+  const displayLoggedIn = loggedIn ? <div>logged in so admin info</div> : <></>
+  
+  return (
+    <div>
+      Home
+      {displayLoggedIn}
+    </div>
   )
-  }
-  return(
-    <div>LoggedIn so there will be owner specific info</div>
- )
+ 
 }
 
 export default Home
