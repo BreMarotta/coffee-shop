@@ -1,15 +1,17 @@
 import React, { useContext } from 'react';
 import { Context } from '../../Context';
+import FoodForm from './FoodForm';
 
 const Foods = () => {
   const { loggedIn } = useContext(Context)
 
-  const displayForm = loggedIn ? <div>Form will go here</div> : <></>
+  const displayForm = loggedIn ? <FoodForm /> : <></>
 
   return (
     <div>
-      Foods
       {displayForm}
+      Foods
+      
     </div>
   )
 

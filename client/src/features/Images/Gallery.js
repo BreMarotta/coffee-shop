@@ -1,15 +1,17 @@
 import React, { useContext } from 'react'
 import { Context } from '../../Context'
+import ImageForm from './ImageForm'
 
 const Gallery = () => {
   const { loggedIn } = useContext(Context)
 
-  const displayForm = loggedIn ? <div>Form goes here</div> : <></>
+  const displayForm = loggedIn ? <ImageForm /> : <></>
   
   return (
     <div>
-      Gallery
       {displayForm}
+      Gallery
+      
     </div>
   )
 }
