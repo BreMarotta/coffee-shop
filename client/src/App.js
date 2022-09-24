@@ -13,13 +13,6 @@ import Login from './features/Login';
 const App = () => {
   const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    fetch('/hello')
-    .then(res => res.json())
-    .then(data => setCount(data.count));
-  }, [])
-
-
   return (
     <BrowserRouter>
       <div className="App">

@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   get '/me', to: 'admins#show'
 
   resources :announcements
+  resources :drinks
+  resources :foods
+  resources :images
+  resources :ingredients
 
   get '*path',
     to: 'fallback#index',
