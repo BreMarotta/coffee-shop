@@ -17,7 +17,7 @@ const Navigation = () => {
         <NavLink to='/drinks' className="navLink">Drink Menu</NavLink>
         <NavLink to='/food' className="navLink">Food Menu</NavLink>
         <NavLink to='/gallery' className="navLink">Image Gallery</NavLink>
-        <hr />
+        <hr style={{backgroundColor: "darksalmon"}}/>
         <br/>
     </div>
   )

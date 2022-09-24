@@ -12,7 +12,7 @@ body {
 }
 
 .navigation {
-  background-color: darksalmon;
+  /* background-color: darksalmon; */
 }
 
 .navLink {
@@ -50,15 +50,23 @@ h1 {
 
  form {
   color: black;
-  background-color: darksalmon;
+  background-color: bisque;
   max-width: 50%;
   margin: auto;
   border-radius: 15px;
  }
 
+ form textarea {
+  background-color: linen;
+ }
+
+ form input {
+  background-color: linen;
+ }
+
  .footer {
-  background-color: darksalmon;
-  color: black;
+  background-color: black;
+  color: white;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -68,7 +76,7 @@ h1 {
  }
 
  .footer a {
-  color: black;
+  color: white;
   padding: 10px;
   
 
